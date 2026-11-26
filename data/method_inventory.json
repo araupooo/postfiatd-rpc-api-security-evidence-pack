@@ -1,0 +1,1070 @@
+{
+ "pin": "0085a1ff885d6a446369cf73a4430f75af22be55",
+ "pin_date": "2026-10-10",
+ "source_table": "src/xrpld/rpc/detail/Handler.cpp handlerArray (lines 83-201) + addHandler LedgerHandler/VersionHandler (lines 248-249)",
+ "note": "Role is the table role (Role::USER / Role::ADMIN). In-tree, an ADMIN method called by a non-admin returns JSON rpcNO_PERMISSION (RPCHandler.cpp:167), mapped to HTTP 401 (ErrorCodes.cpp:100). probe_params are inert/safe values only; state-changing and secret-bearing methods are SKIP and never called.",
+ "totals": {
+  "methods": 74,
+  "admin": 23,
+  "user": 51,
+  "probe": 45,
+  "refusal": 23,
+  "skip": 6
+ },
+ "methods": [
+  {
+   "method": "account_channels",
+   "handler_fn": "doAccountChannels",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 92,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/AccountChannels.cpp",
+   "handler_line": 68,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+   }
+  },
+  {
+   "method": "account_currencies",
+   "handler_fn": "doAccountCurrencies",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 87,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/AccountCurrenciesHandler.cpp",
+   "handler_line": 32,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+   }
+  },
+  {
+   "method": "account_info",
+   "handler_fn": "doAccountInfo",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 86,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/AccountInfo.cpp",
+   "handler_line": 50,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+   }
+  },
+  {
+   "method": "account_lines",
+   "handler_fn": "doAccountLines",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 91,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/AccountLines.cpp",
+   "handler_line": 81,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+   }
+  },
+  {
+   "method": "account_nfts",
+   "handler_fn": "doAccountNFTs",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 93,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/AccountObjects.cpp",
+   "handler_line": 50,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+   }
+  },
+  {
+   "method": "account_objects",
+   "handler_fn": "doAccountObjects",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 94,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/AccountObjects.cpp",
+   "handler_line": 181,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+   }
+  },
+  {
+   "method": "account_offers",
+   "handler_fn": "doAccountOffers",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 95,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/AccountOffers.cpp",
+   "handler_line": 57,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+   }
+  },
+  {
+   "method": "account_tx",
+   "handler_fn": "doAccountTxJson",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 96,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/AccountTx.cpp",
+   "handler_line": 408,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+   }
+  },
+  {
+   "method": "amm_info",
+   "handler_fn": "doAMMInfo",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 97,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/AMMInfo.cpp",
+   "handler_line": 76,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "amm_account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+   }
+  },
+  {
+   "method": "blacklist",
+   "handler_fn": "doBlackList",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 98,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/BlackList.cpp",
+   "handler_line": 29,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "book_changes",
+   "handler_fn": "doBookChanges",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 99,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/BookOffers.cpp",
+   "handler_line": 222,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "taker_pays": {
+     "currency": "XRP"
+    },
+    "taker_gets": {
+     "currency": "USD",
+     "issuer": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+    }
+   }
+  },
+  {
+   "method": "book_offers",
+   "handler_fn": "doBookOffers",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 100,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/BookOffers.cpp",
+   "handler_line": 37,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "taker_pays": {
+     "currency": "XRP"
+    },
+    "taker_gets": {
+     "currency": "USD",
+     "issuer": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+    }
+   }
+  },
+  {
+   "method": "can_delete",
+   "handler_fn": "doCanDelete",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 101,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/CanDelete.cpp",
+   "handler_line": 35,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "channel_authorize",
+   "handler_fn": "doChannelAuthorize",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 102,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/PayChanClaim.cpp",
+   "handler_line": 42,
+   "probe_class": "SKIP",
+   "probe_reason": "secret-bearing: creates a payment-channel signature",
+   "probe_params": {}
+  },
+  {
+   "method": "channel_verify",
+   "handler_fn": "doChannelVerify",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 103,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/PayChanClaim.cpp",
+   "handler_line": 113,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "amount": "1",
+    "public_key": "aB",
+    "signature": "00"
+   }
+  },
+  {
+   "method": "connect",
+   "handler_fn": "doConnect",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 104,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Connect.cpp",
+   "handler_line": 39,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "consensus_info",
+   "handler_fn": "doConsensusInfo",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 105,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/ConsensusInfo.cpp",
+   "handler_line": 30,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "deposit_authorized",
+   "handler_fn": "doDepositAuthorized",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 106,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/DepositAuthorized.cpp",
+   "handler_line": 41,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "source_account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59",
+    "destination_account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+   }
+  },
+  {
+   "method": "exclusion_info",
+   "handler_fn": "doExclusionInfo",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 110,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/ExclusionInfo.cpp",
+   "handler_line": 35,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {}
+  },
+  {
+   "method": "feature",
+   "handler_fn": "doFeature",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 111,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Feature1.cpp",
+   "handler_line": 36,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {}
+  },
+  {
+   "method": "fee",
+   "handler_fn": "doFee",
+   "role": "USER",
+   "condition": "NEEDS_CURRENT_LEDGER",
+   "table_line": 112,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Fee1.cpp",
+   "handler_line": 30,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {}
+  },
+  {
+   "method": "fetch_info",
+   "handler_fn": "doFetchInfo",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 113,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/FetchInfo.cpp",
+   "handler_line": 30,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "gateway_balances",
+   "handler_fn": "doGatewayBalances",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 114,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/GatewayBalances.cpp",
+   "handler_line": 54,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+   }
+  },
+  {
+   "method": "get_aggregate_price",
+   "handler_fn": "doGetAggregatePrice",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 116,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/GetAggregatePrice.cpp",
+   "handler_line": 153,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "base": {
+     "currency": "XRP"
+    },
+    "quote": {
+     "currency": "USD"
+    }
+   }
+  },
+  {
+   "method": "get_counts",
+   "handler_fn": "doGetCounts",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 115,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/GetCounts.cpp",
+   "handler_line": 138,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "ledger",
+   "handler_fn": "LedgerHandler",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 248,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/LedgerHandler.h",
+   "handler_line": 63,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (default params only; full/accounts gated in-handler by isUnlimited, LedgerHandler.cpp:67-71)",
+   "probe_params": {
+    "ledger_index": "validated",
+    "transactions": false,
+    "expand": false,
+    "owner_funds": false
+   }
+  },
+  {
+   "method": "ledger_accept",
+   "handler_fn": "doLedgerAccept",
+   "role": "ADMIN",
+   "condition": "NEEDS_CURRENT_LEDGER",
+   "table_line": 120,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/LedgerAccept.cpp",
+   "handler_line": 34,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "ledger_cleaner",
+   "handler_fn": "doLedgerCleaner",
+   "role": "ADMIN",
+   "condition": "NEEDS_NETWORK_CONNECTION",
+   "table_line": 124,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/LedgerCleanerHandler.cpp",
+   "handler_line": 30,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "ledger_closed",
+   "handler_fn": "doLedgerClosed",
+   "role": "USER",
+   "condition": "NEEDS_CLOSED_LEDGER",
+   "table_line": 128,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/LedgerClosed.cpp",
+   "handler_line": 30,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {}
+  },
+  {
+   "method": "ledger_current",
+   "handler_fn": "doLedgerCurrent",
+   "role": "USER",
+   "condition": "NEEDS_CURRENT_LEDGER",
+   "table_line": 129,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/LedgerCurrent.cpp",
+   "handler_line": 30,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {}
+  },
+  {
+   "method": "ledger_data",
+   "handler_fn": "doLedgerData",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 133,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/LedgerData.cpp",
+   "handler_line": 46,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "ledger_index": "validated",
+    "limit": 1
+   }
+  },
+  {
+   "method": "ledger_entry",
+   "handler_fn": "doLedgerEntry",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 134,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/LedgerEntry.cpp",
+   "handler_line": 755,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "index": "0000000000000000000000000000000000000000000000000000000000000000"
+   }
+  },
+  {
+   "method": "ledger_header",
+   "handler_fn": "doLedgerHeader",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 135,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/LedgerHeader.cpp",
+   "handler_line": 34,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "ledger_index": "validated"
+   }
+  },
+  {
+   "method": "ledger_request",
+   "handler_fn": "doLedgerRequest",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 136,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/LedgerRequest.cpp",
+   "handler_line": 36,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "log_level",
+   "handler_fn": "doLogLevel",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 137,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/LogLevel.cpp",
+   "handler_line": 34,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "logrotate",
+   "handler_fn": "doLogRotate",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 138,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/LogRotate.cpp",
+   "handler_line": 29,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "manifest",
+   "handler_fn": "doManifest",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 139,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/DoManifest.cpp",
+   "handler_line": 30,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "public_key": "nHBAToXoTH6eZtC1cMJDvjG7eRb7ufZ3GUpeisvNVT4ofruRdVvd"
+   }
+  },
+  {
+   "method": "nft_buy_offers",
+   "handler_fn": "doNFTBuyOffers",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 140,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/NFTOffers.cpp",
+   "handler_line": 165,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "tokenid": "0000000000000000000000000000000000000000000000000000000000000000"
+   }
+  },
+  {
+   "method": "nft_sell_offers",
+   "handler_fn": "doNFTSellOffers",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 141,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/NFTOffers.cpp",
+   "handler_line": 151,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "tokenid": "0000000000000000000000000000000000000000000000000000000000000000"
+   }
+  },
+  {
+   "method": "noripple_check",
+   "handler_fn": "doNoRippleCheck",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 142,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/NoRippleCheck.cpp",
+   "handler_line": 62,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+   }
+  },
+  {
+   "method": "owner_info",
+   "handler_fn": "doOwnerInfo",
+   "role": "USER",
+   "condition": "NEEDS_CURRENT_LEDGER",
+   "table_line": 143,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/OwnerInfo.cpp",
+   "handler_line": 35,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+   }
+  },
+  {
+   "method": "path_find",
+   "handler_fn": "doPathFind",
+   "role": "USER",
+   "condition": "NEEDS_CURRENT_LEDGER",
+   "table_line": 145,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/PathFind.cpp",
+   "handler_line": 33,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "source_account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59",
+    "destination_account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59",
+    "destination_amount": {
+     "currency": "XRP",
+     "value": "1"
+    }
+   }
+  },
+  {
+   "method": "peer_reservations_add",
+   "handler_fn": "doPeerReservationsAdd",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 151,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Reservations.cpp",
+   "handler_line": 36,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "peer_reservations_del",
+   "handler_fn": "doPeerReservationsDel",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 155,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Reservations.cpp",
+   "handler_line": 89,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "peer_reservations_list",
+   "handler_fn": "doPeerReservationsList",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 159,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Reservations.cpp",
+   "handler_line": 116,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "peers",
+   "handler_fn": "doPeers",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 144,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Peers.cpp",
+   "handler_line": 33,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "ping",
+   "handler_fn": "doPing",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 146,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Ping.cpp",
+   "handler_line": 33,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {}
+  },
+  {
+   "method": "print",
+   "handler_fn": "doPrint",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 147,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Print.cpp",
+   "handler_line": 30,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "random",
+   "handler_fn": "doRandom",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 150,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Random.cpp",
+   "handler_line": 39,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {}
+  },
+  {
+   "method": "ripple_path_find",
+   "handler_fn": "doRipplePathFind",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 163,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/RipplePathFind.cpp",
+   "handler_line": 33,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "source_account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59",
+    "destination_account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59",
+    "destination_amount": {
+     "currency": "XRP",
+     "value": "1"
+    }
+   }
+  },
+  {
+   "method": "server_definitions",
+   "handler_fn": "doServerDefinitions",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 164,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/ServerInfo.cpp",
+   "handler_line": 299,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {}
+  },
+  {
+   "method": "server_info",
+   "handler_fn": "doServerInfo",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 168,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/ServerInfo.cpp",
+   "handler_line": 322,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {}
+  },
+  {
+   "method": "server_state",
+   "handler_fn": "doServerState",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 169,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/ServerState.cpp",
+   "handler_line": 30,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {}
+  },
+  {
+   "method": "sign",
+   "handler_fn": "doSign",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 170,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/SignHandler.cpp",
+   "handler_line": 34,
+   "probe_class": "SKIP",
+   "probe_reason": "secret-bearing: signing requires a private key in the request",
+   "probe_params": {}
+  },
+  {
+   "method": "sign_for",
+   "handler_fn": "doSignFor",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 171,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/SignFor.cpp",
+   "handler_line": 35,
+   "probe_class": "SKIP",
+   "probe_reason": "secret-bearing: signing requires a private key in the request",
+   "probe_params": {}
+  },
+  {
+   "method": "simulate",
+   "handler_fn": "doSimulate",
+   "role": "USER",
+   "condition": "NEEDS_CURRENT_LEDGER",
+   "table_line": 172,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Simulate.cpp",
+   "handler_line": 311,
+   "probe_class": "SKIP",
+   "probe_reason": "heavy: transaction simulation; not attempted",
+   "probe_params": {}
+  },
+  {
+   "method": "stop",
+   "handler_fn": "doStop",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 173,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Stop.cpp",
+   "handler_line": 32,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "submit",
+   "handler_fn": "doSubmit",
+   "role": "USER",
+   "condition": "NEEDS_CURRENT_LEDGER",
+   "table_line": 174,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Submit.cpp",
+   "handler_line": 45,
+   "probe_class": "SKIP",
+   "probe_reason": "state-changing: would broadcast a transaction",
+   "probe_params": {}
+  },
+  {
+   "method": "submit_multisigned",
+   "handler_fn": "doSubmitMultiSigned",
+   "role": "USER",
+   "condition": "NEEDS_CURRENT_LEDGER",
+   "table_line": 175,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/SubmitMultiSigned.cpp",
+   "handler_line": 34,
+   "probe_class": "SKIP",
+   "probe_reason": "state-changing: would broadcast a transaction",
+   "probe_params": {}
+  },
+  {
+   "method": "subscribe",
+   "handler_fn": "doSubscribe",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 198,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Subscribe.cpp",
+   "handler_line": 38,
+   "probe_class": "PROBE",
+   "probe_reason": "USER evented method: one no-param call records the HTTP JSON-RPC error shape (websocket-only)",
+   "probe_params": {}
+  },
+  {
+   "method": "transaction_entry",
+   "handler_fn": "doTransactionEntry",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 179,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/TransactionEntry.cpp",
+   "handler_line": 38,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "tx_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+   }
+  },
+  {
+   "method": "tx",
+   "handler_fn": "doTxJson",
+   "role": "USER",
+   "condition": "NEEDS_NETWORK_CONNECTION",
+   "table_line": 180,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Tx.cpp",
+   "handler_line": 286,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "transaction": "0000000000000000000000000000000000000000000000000000000000000000"
+   }
+  },
+  {
+   "method": "tx_history",
+   "handler_fn": "doTxHistory",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 181,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/TxHistory.cpp",
+   "handler_line": 39,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {}
+  },
+  {
+   "method": "tx_reduce_relay",
+   "handler_fn": "doTxReduceRelay",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 182,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/TxReduceRelay.cpp",
+   "handler_line": 29,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {}
+  },
+  {
+   "method": "unl_list",
+   "handler_fn": "doUnlList",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 183,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/UnlList.cpp",
+   "handler_line": 30,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "unsubscribe",
+   "handler_fn": "doUnsubscribe",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 199,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Unsubscribe.cpp",
+   "handler_line": 33,
+   "probe_class": "PROBE",
+   "probe_reason": "USER evented method: one no-param call records the HTTP JSON-RPC error shape (websocket-only)",
+   "probe_params": {}
+  },
+  {
+   "method": "validation_create",
+   "handler_fn": "doValidationCreate",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 184,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/ValidationCreate.cpp",
+   "handler_line": 45,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "validator_info",
+   "handler_fn": "doValidatorInfo",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 193,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/ValidatorInfo.cpp",
+   "handler_line": 31,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "validator_list_sites",
+   "handler_fn": "doValidatorListSites",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 189,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/ValidatorListSites.cpp",
+   "handler_line": 29,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "validator_votes",
+   "handler_fn": "doValidatorVotes",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 194,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/ValidatorVotes.cpp",
+   "handler_line": 46,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {
+    "validation_public_key": "ED4D4244B734459A6D88DA611B2F2D94951181E422381AB078FAF75A41F0470A59"
+   }
+  },
+  {
+   "method": "validators",
+   "handler_fn": "doValidators",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 188,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Validators.cpp",
+   "handler_line": 29,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  },
+  {
+   "method": "vault_info",
+   "handler_fn": "doVaultInfo",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 195,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/VaultInfo.cpp",
+   "handler_line": 79,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method (or error-shape probe with inert params)",
+   "probe_params": {}
+  },
+  {
+   "method": "version",
+   "handler_fn": "VersionHandler",
+   "role": "USER",
+   "condition": "NO_CONDITION",
+   "table_line": 249,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/Version.h",
+   "handler_line": 49,
+   "probe_class": "PROBE",
+   "probe_reason": "USER read-only method",
+   "probe_params": {}
+  },
+  {
+   "method": "wallet_propose",
+   "handler_fn": "doWalletPropose",
+   "role": "ADMIN",
+   "condition": "NO_CONDITION",
+   "table_line": 196,
+   "table_file": "src/xrpld/rpc/detail/Handler.cpp",
+   "handler_file": "src/xrpld/rpc/handlers/WalletPropose.cpp",
+   "handler_line": 68,
+   "probe_class": "REFUSAL",
+   "probe_reason": "ADMIN method: one no-param call; role check precedes dispatch (RPCHandler.cpp:167), so no handler code runs",
+   "probe_params": {}
+  }
+ ]
+}

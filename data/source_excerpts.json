@@ -1,0 +1,1369 @@
+{
+ "pin": "0085a1ff885d6a446369cf73a4430f75af22be55",
+ "pin_date": "2026-10-10",
+ "excerpts": [
+  {
+   "id": "E-01",
+   "file": "src/xrpld/rpc/detail/Handler.cpp",
+   "line_ranges": [
+    [
+     83,
+     201
+    ]
+   ],
+   "lines": [
+    {
+     "line": 83,
+     "text": "Handler const handlerArray[]{"
+    },
+    {
+     "line": 84,
+     "text": "    // Some handlers not specified here are added to the table via addHandler()"
+    },
+    {
+     "line": 85,
+     "text": "    // Request-response methods"
+    },
+    {
+     "line": 86,
+     "text": "    {\"account_info\", byRef(&doAccountInfo), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 87,
+     "text": "    {\"account_currencies\","
+    },
+    {
+     "line": 88,
+     "text": "     byRef(&doAccountCurrencies),"
+    },
+    {
+     "line": 89,
+     "text": "     Role::USER,"
+    },
+    {
+     "line": 90,
+     "text": "     NO_CONDITION},"
+    },
+    {
+     "line": 91,
+     "text": "    {\"account_lines\", byRef(&doAccountLines), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 92,
+     "text": "    {\"account_channels\", byRef(&doAccountChannels), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 93,
+     "text": "    {\"account_nfts\", byRef(&doAccountNFTs), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 94,
+     "text": "    {\"account_objects\", byRef(&doAccountObjects), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 95,
+     "text": "    {\"account_offers\", byRef(&doAccountOffers), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 96,
+     "text": "    {\"account_tx\", byRef(&doAccountTxJson), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 97,
+     "text": "    {\"amm_info\", byRef(&doAMMInfo), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 98,
+     "text": "    {\"blacklist\", byRef(&doBlackList), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 99,
+     "text": "    {\"book_changes\", byRef(&doBookChanges), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 100,
+     "text": "    {\"book_offers\", byRef(&doBookOffers), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 101,
+     "text": "    {\"can_delete\", byRef(&doCanDelete), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 102,
+     "text": "    {\"channel_authorize\", byRef(&doChannelAuthorize), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 103,
+     "text": "    {\"channel_verify\", byRef(&doChannelVerify), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 104,
+     "text": "    {\"connect\", byRef(&doConnect), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 105,
+     "text": "    {\"consensus_info\", byRef(&doConsensusInfo), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 106,
+     "text": "    {\"deposit_authorized\","
+    },
+    {
+     "line": 107,
+     "text": "     byRef(&doDepositAuthorized),"
+    },
+    {
+     "line": 108,
+     "text": "     Role::USER,"
+    },
+    {
+     "line": 109,
+     "text": "     NO_CONDITION},"
+    },
+    {
+     "line": 110,
+     "text": "    {\"exclusion_info\", byRef(&doExclusionInfo), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 111,
+     "text": "    {\"feature\", byRef(&doFeature), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 112,
+     "text": "    {\"fee\", byRef(&doFee), Role::USER, NEEDS_CURRENT_LEDGER},"
+    },
+    {
+     "line": 113,
+     "text": "    {\"fetch_info\", byRef(&doFetchInfo), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 114,
+     "text": "    {\"gateway_balances\", byRef(&doGatewayBalances), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 115,
+     "text": "    {\"get_counts\", byRef(&doGetCounts), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 116,
+     "text": "    {\"get_aggregate_price\","
+    },
+    {
+     "line": 117,
+     "text": "     byRef(&doGetAggregatePrice),"
+    },
+    {
+     "line": 118,
+     "text": "     Role::USER,"
+    },
+    {
+     "line": 119,
+     "text": "     NO_CONDITION},"
+    },
+    {
+     "line": 120,
+     "text": "    {\"ledger_accept\","
+    },
+    {
+     "line": 121,
+     "text": "     byRef(&doLedgerAccept),"
+    },
+    {
+     "line": 122,
+     "text": "     Role::ADMIN,"
+    },
+    {
+     "line": 123,
+     "text": "     NEEDS_CURRENT_LEDGER},"
+    },
+    {
+     "line": 124,
+     "text": "    {\"ledger_cleaner\","
+    },
+    {
+     "line": 125,
+     "text": "     byRef(&doLedgerCleaner),"
+    },
+    {
+     "line": 126,
+     "text": "     Role::ADMIN,"
+    },
+    {
+     "line": 127,
+     "text": "     NEEDS_NETWORK_CONNECTION},"
+    },
+    {
+     "line": 128,
+     "text": "    {\"ledger_closed\", byRef(&doLedgerClosed), Role::USER, NEEDS_CLOSED_LEDGER},"
+    },
+    {
+     "line": 129,
+     "text": "    {\"ledger_current\","
+    },
+    {
+     "line": 130,
+     "text": "     byRef(&doLedgerCurrent),"
+    },
+    {
+     "line": 131,
+     "text": "     Role::USER,"
+    },
+    {
+     "line": 132,
+     "text": "     NEEDS_CURRENT_LEDGER},"
+    },
+    {
+     "line": 133,
+     "text": "    {\"ledger_data\", byRef(&doLedgerData), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 134,
+     "text": "    {\"ledger_entry\", byRef(&doLedgerEntry), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 135,
+     "text": "    {\"ledger_header\", byRef(&doLedgerHeader), Role::USER, NO_CONDITION, 1, 1},"
+    },
+    {
+     "line": 136,
+     "text": "    {\"ledger_request\", byRef(&doLedgerRequest), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 137,
+     "text": "    {\"log_level\", byRef(&doLogLevel), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 138,
+     "text": "    {\"logrotate\", byRef(&doLogRotate), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 139,
+     "text": "    {\"manifest\", byRef(&doManifest), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 140,
+     "text": "    {\"nft_buy_offers\", byRef(&doNFTBuyOffers), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 141,
+     "text": "    {\"nft_sell_offers\", byRef(&doNFTSellOffers), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 142,
+     "text": "    {\"noripple_check\", byRef(&doNoRippleCheck), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 143,
+     "text": "    {\"owner_info\", byRef(&doOwnerInfo), Role::USER, NEEDS_CURRENT_LEDGER},"
+    },
+    {
+     "line": 144,
+     "text": "    {\"peers\", byRef(&doPeers), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 145,
+     "text": "    {\"path_find\", byRef(&doPathFind), Role::USER, NEEDS_CURRENT_LEDGER},"
+    },
+    {
+     "line": 146,
+     "text": "    {\"ping\", byRef(&doPing), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 147,
+     "text": "    {\"print\", byRef(&doPrint), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 148,
+     "text": "    //      {   \"profile\",              byRef (&doProfile), Role::USER,"
+    },
+    {
+     "line": 149,
+     "text": "    //      NEEDS_CURRENT_LEDGER  },"
+    },
+    {
+     "line": 150,
+     "text": "    {\"random\", byRef(&doRandom), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 151,
+     "text": "    {\"peer_reservations_add\","
+    },
+    {
+     "line": 152,
+     "text": "     byRef(&doPeerReservationsAdd),"
+    },
+    {
+     "line": 153,
+     "text": "     Role::ADMIN,"
+    },
+    {
+     "line": 154,
+     "text": "     NO_CONDITION},"
+    },
+    {
+     "line": 155,
+     "text": "    {\"peer_reservations_del\","
+    },
+    {
+     "line": 156,
+     "text": "     byRef(&doPeerReservationsDel),"
+    },
+    {
+     "line": 157,
+     "text": "     Role::ADMIN,"
+    },
+    {
+     "line": 158,
+     "text": "     NO_CONDITION},"
+    },
+    {
+     "line": 159,
+     "text": "    {\"peer_reservations_list\","
+    },
+    {
+     "line": 160,
+     "text": "     byRef(&doPeerReservationsList),"
+    },
+    {
+     "line": 161,
+     "text": "     Role::ADMIN,"
+    },
+    {
+     "line": 162,
+     "text": "     NO_CONDITION},"
+    },
+    {
+     "line": 163,
+     "text": "    {\"ripple_path_find\", byRef(&doRipplePathFind), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 164,
+     "text": "    {\"server_definitions\","
+    },
+    {
+     "line": 165,
+     "text": "     byRef(&doServerDefinitions),"
+    },
+    {
+     "line": 166,
+     "text": "     Role::USER,"
+    },
+    {
+     "line": 167,
+     "text": "     NO_CONDITION},"
+    },
+    {
+     "line": 168,
+     "text": "    {\"server_info\", byRef(&doServerInfo), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 169,
+     "text": "    {\"server_state\", byRef(&doServerState), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 170,
+     "text": "    {\"sign\", byRef(&doSign), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 171,
+     "text": "    {\"sign_for\", byRef(&doSignFor), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 172,
+     "text": "    {\"simulate\", byRef(&doSimulate), Role::USER, NEEDS_CURRENT_LEDGER},"
+    },
+    {
+     "line": 173,
+     "text": "    {\"stop\", byRef(&doStop), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 174,
+     "text": "    {\"submit\", byRef(&doSubmit), Role::USER, NEEDS_CURRENT_LEDGER},"
+    },
+    {
+     "line": 175,
+     "text": "    {\"submit_multisigned\","
+    },
+    {
+     "line": 176,
+     "text": "     byRef(&doSubmitMultiSigned),"
+    },
+    {
+     "line": 177,
+     "text": "     Role::USER,"
+    },
+    {
+     "line": 178,
+     "text": "     NEEDS_CURRENT_LEDGER},"
+    },
+    {
+     "line": 179,
+     "text": "    {\"transaction_entry\", byRef(&doTransactionEntry), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 180,
+     "text": "    {\"tx\", byRef(&doTxJson), Role::USER, NEEDS_NETWORK_CONNECTION},"
+    },
+    {
+     "line": 181,
+     "text": "    {\"tx_history\", byRef(&doTxHistory), Role::USER, NO_CONDITION, 1, 1},"
+    },
+    {
+     "line": 182,
+     "text": "    {\"tx_reduce_relay\", byRef(&doTxReduceRelay), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 183,
+     "text": "    {\"unl_list\", byRef(&doUnlList), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 184,
+     "text": "    {\"validation_create\","
+    },
+    {
+     "line": 185,
+     "text": "     byRef(&doValidationCreate),"
+    },
+    {
+     "line": 186,
+     "text": "     Role::ADMIN,"
+    },
+    {
+     "line": 187,
+     "text": "     NO_CONDITION},"
+    },
+    {
+     "line": 188,
+     "text": "    {\"validators\", byRef(&doValidators), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 189,
+     "text": "    {\"validator_list_sites\","
+    },
+    {
+     "line": 190,
+     "text": "     byRef(&doValidatorListSites),"
+    },
+    {
+     "line": 191,
+     "text": "     Role::ADMIN,"
+    },
+    {
+     "line": 192,
+     "text": "     NO_CONDITION},"
+    },
+    {
+     "line": 193,
+     "text": "    {\"validator_info\", byRef(&doValidatorInfo), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 194,
+     "text": "    {\"validator_votes\", byRef(&doValidatorVotes), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 195,
+     "text": "    {\"vault_info\", byRef(&doVaultInfo), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 196,
+     "text": "    {\"wallet_propose\", byRef(&doWalletPropose), Role::ADMIN, NO_CONDITION},"
+    },
+    {
+     "line": 197,
+     "text": "    // Evented methods"
+    },
+    {
+     "line": 198,
+     "text": "    {\"subscribe\", byRef(&doSubscribe), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 199,
+     "text": "    {\"unsubscribe\", byRef(&doUnsubscribe), Role::USER, NO_CONDITION},"
+    },
+    {
+     "line": 200,
+     "text": "};"
+    },
+    {
+     "line": 201,
+     "text": ""
+    }
+   ],
+   "note": "Full handlerArray table: every method name, handler, table role, condition."
+  },
+  {
+   "id": "E-02",
+   "file": "src/xrpld/rpc/detail/Handler.cpp",
+   "line_ranges": [
+    [
+     248,
+     249
+    ]
+   ],
+   "lines": [
+    {
+     "line": 248,
+     "text": "        addHandler<LedgerHandler>();"
+    },
+    {
+     "line": 249,
+     "text": "        addHandler<VersionHandler>();"
+    }
+   ],
+   "note": "addHandler<LedgerHandler>() and addHandler<VersionHandler>() \u2014 methods not in the table literal."
+  },
+  {
+   "id": "E-03",
+   "file": "src/xrpld/rpc/handlers/LedgerHandler.h",
+   "line_ranges": [
+    [
+     63,
+     71
+    ]
+   ],
+   "lines": [
+    {
+     "line": 63,
+     "text": "    static constexpr char name[] = \"ledger\";"
+    },
+    {
+     "line": 64,
+     "text": ""
+    },
+    {
+     "line": 65,
+     "text": "    static constexpr unsigned minApiVer = RPC::apiMinimumSupportedVersion;"
+    },
+    {
+     "line": 66,
+     "text": ""
+    },
+    {
+     "line": 67,
+     "text": "    static constexpr unsigned maxApiVer = RPC::apiMaximumValidVersion;"
+    },
+    {
+     "line": 68,
+     "text": ""
+    },
+    {
+     "line": 69,
+     "text": "    static constexpr Role role = Role::USER;"
+    },
+    {
+     "line": 70,
+     "text": ""
+    },
+    {
+     "line": 71,
+     "text": "    static constexpr Condition condition = NO_CONDITION;"
+    }
+   ],
+   "note": "LedgerHandler: name 'ledger', role USER, condition NO_CONDITION."
+  },
+  {
+   "id": "E-04",
+   "file": "src/xrpld/rpc/handlers/Version.h",
+   "line_ranges": [
+    [
+     49,
+     57
+    ]
+   ],
+   "lines": [
+    {
+     "line": 49,
+     "text": "    static constexpr char const* name = \"version\";"
+    },
+    {
+     "line": 50,
+     "text": ""
+    },
+    {
+     "line": 51,
+     "text": "    static constexpr unsigned minApiVer = RPC::apiMinimumSupportedVersion;"
+    },
+    {
+     "line": 52,
+     "text": ""
+    },
+    {
+     "line": 53,
+     "text": "    static constexpr unsigned maxApiVer = RPC::apiMaximumValidVersion;"
+    },
+    {
+     "line": 54,
+     "text": ""
+    },
+    {
+     "line": 55,
+     "text": "    static constexpr Role role = Role::USER;"
+    },
+    {
+     "line": 56,
+     "text": ""
+    },
+    {
+     "line": 57,
+     "text": "    static constexpr Condition condition = NO_CONDITION;"
+    }
+   ],
+   "note": "VersionHandler: name 'version', role USER, condition NO_CONDITION."
+  },
+  {
+   "id": "E-05",
+   "file": "src/xrpld/rpc/Role.h",
+   "line_ranges": [
+    [
+     44,
+     44
+    ]
+   ],
+   "lines": [
+    {
+     "line": 44,
+     "text": "enum class Role { GUEST, USER, IDENTIFIED, ADMIN, PROXY, FORBID };"
+    }
+   ],
+   "note": "Role enum: GUEST, USER, IDENTIFIED, ADMIN, PROXY, FORBID."
+  },
+  {
+   "id": "E-06",
+   "file": "src/xrpld/rpc/detail/Role.cpp",
+   "line_ranges": [
+    [
+     28,
+     46
+    ]
+   ],
+   "lines": [
+    {
+     "line": 28,
+     "text": ""
+    },
+    {
+     "line": 29,
+     "text": "bool"
+    },
+    {
+     "line": 30,
+     "text": "passwordUnrequiredOrSentCorrect(Port const& port, Json::Value const& params)"
+    },
+    {
+     "line": 31,
+     "text": "{"
+    },
+    {
+     "line": 32,
+     "text": "    XRPL_ASSERT("
+    },
+    {
+     "line": 33,
+     "text": "        !(port.admin_nets_v4.empty() && port.admin_nets_v6.empty()),"
+    },
+    {
+     "line": 34,
+     "text": "        \"ripple::passwordUnrequiredOrSentCorrect : non-empty admin nets\");"
+    },
+    {
+     "line": 35,
+     "text": "    bool const passwordRequired ="
+    },
+    {
+     "line": 36,
+     "text": "        (!port.admin_user.empty() || !port.admin_password.empty());"
+    },
+    {
+     "line": 37,
+     "text": ""
+    },
+    {
+     "line": 38,
+     "text": "    return !passwordRequired ||"
+    },
+    {
+     "line": 39,
+     "text": "        ((params[\"admin_password\"].isString() &&"
+    },
+    {
+     "line": 40,
+     "text": "          params[\"admin_password\"].asString() == port.admin_password) &&"
+    },
+    {
+     "line": 41,
+     "text": "         (params[\"admin_user\"].isString() &&"
+    },
+    {
+     "line": 42,
+     "text": "          params[\"admin_user\"].asString() == port.admin_user));"
+    },
+    {
+     "line": 43,
+     "text": "}"
+    },
+    {
+     "line": 44,
+     "text": ""
+    },
+    {
+     "line": 45,
+     "text": "bool"
+    },
+    {
+     "line": 46,
+     "text": "ipAllowed("
+    }
+   ],
+   "note": "passwordUnrequiredOrSentCorrect: no password required when admin_user/admin_password are empty."
+  },
+  {
+   "id": "E-07",
+   "file": "src/xrpld/rpc/detail/Role.cpp",
+   "line_ranges": [
+    [
+     96,
+     120
+    ]
+   ],
+   "lines": [
+    {
+     "line": 96,
+     "text": "    Role const& required,"
+    },
+    {
+     "line": 97,
+     "text": "    Port const& port,"
+    },
+    {
+     "line": 98,
+     "text": "    Json::Value const& params,"
+    },
+    {
+     "line": 99,
+     "text": "    beast::IP::Endpoint const& remoteIp,"
+    },
+    {
+     "line": 100,
+     "text": "    std::string_view user)"
+    },
+    {
+     "line": 101,
+     "text": "{"
+    },
+    {
+     "line": 102,
+     "text": "    if (isAdmin(port, params, remoteIp.address()))"
+    },
+    {
+     "line": 103,
+     "text": "        return Role::ADMIN;"
+    },
+    {
+     "line": 104,
+     "text": ""
+    },
+    {
+     "line": 105,
+     "text": "    if (required == Role::ADMIN)"
+    },
+    {
+     "line": 106,
+     "text": "        return Role::FORBID;"
+    },
+    {
+     "line": 107,
+     "text": ""
+    },
+    {
+     "line": 108,
+     "text": "    if (ipAllowed("
+    },
+    {
+     "line": 109,
+     "text": "            remoteIp.address(),"
+    },
+    {
+     "line": 110,
+     "text": "            port.secure_gateway_nets_v4,"
+    },
+    {
+     "line": 111,
+     "text": "            port.secure_gateway_nets_v6))"
+    },
+    {
+     "line": 112,
+     "text": "    {"
+    },
+    {
+     "line": 113,
+     "text": "        if (user.size())"
+    },
+    {
+     "line": 114,
+     "text": "            return Role::IDENTIFIED;"
+    },
+    {
+     "line": 115,
+     "text": "        return Role::PROXY;"
+    },
+    {
+     "line": 116,
+     "text": "    }"
+    },
+    {
+     "line": 117,
+     "text": ""
+    },
+    {
+     "line": 118,
+     "text": "    return Role::GUEST;"
+    },
+    {
+     "line": 119,
+     "text": "}"
+    },
+    {
+     "line": 120,
+     "text": ""
+    }
+   ],
+   "note": "isAdmin (IP allowlist AND password) and requestRole (ADMIN required + not admin -> FORBID)."
+  },
+  {
+   "id": "E-08",
+   "file": "src/xrpld/rpc/detail/RPCHandler.cpp",
+   "line_ranges": [
+    [
+     165,
+     168
+    ]
+   ],
+   "lines": [
+    {
+     "line": 165,
+     "text": ""
+    },
+    {
+     "line": 166,
+     "text": "    if (handler->role_ == Role::ADMIN && context.role != Role::ADMIN)"
+    },
+    {
+     "line": 167,
+     "text": "        return rpcNO_PERMISSION;"
+    },
+    {
+     "line": 168,
+     "text": ""
+    }
+   ],
+   "note": "ADMIN handler + non-admin caller -> rpcNO_PERMISSION (before dispatch)."
+  },
+  {
+   "id": "E-09",
+   "file": "src/xrpld/rpc/detail/RPCHandler.cpp",
+   "line_ranges": [
+    [
+     261,
+     268
+    ]
+   ],
+   "lines": [
+    {
+     "line": 261,
+     "text": "roleRequired(unsigned int version, bool betaEnabled, std::string const& method)"
+    },
+    {
+     "line": 262,
+     "text": "{"
+    },
+    {
+     "line": 263,
+     "text": "    auto handler = RPC::getHandler(version, betaEnabled, method);"
+    },
+    {
+     "line": 264,
+     "text": ""
+    },
+    {
+     "line": 265,
+     "text": "    if (!handler)"
+    },
+    {
+     "line": 266,
+     "text": "        return Role::FORBID;"
+    },
+    {
+     "line": 267,
+     "text": ""
+    },
+    {
+     "line": 268,
+     "text": "    return handler->role_;"
+    }
+   ],
+   "note": "roleRequired: unknown method -> Role::FORBID."
+  },
+  {
+   "id": "E-10",
+   "file": "src/xrpld/rpc/detail/ServerHandler.cpp",
+   "line_ranges": [
+    [
+     703,
+     724
+    ]
+   ],
+   "lines": [
+    {
+     "line": 703,
+     "text": "        auto role = Role::FORBID;"
+    },
+    {
+     "line": 704,
+     "text": "        auto required = Role::FORBID;"
+    },
+    {
+     "line": 705,
+     "text": "        if (jsonRPC.isMember(jss::method) && jsonRPC[jss::method].isString())"
+    },
+    {
+     "line": 706,
+     "text": "            required = RPC::roleRequired("
+    },
+    {
+     "line": 707,
+     "text": "                apiVersion,"
+    },
+    {
+     "line": 708,
+     "text": "                app_.config().BETA_RPC_API,"
+    },
+    {
+     "line": 709,
+     "text": "                jsonRPC[jss::method].asString());"
+    },
+    {
+     "line": 710,
+     "text": ""
+    },
+    {
+     "line": 711,
+     "text": "        if (jsonRPC.isMember(jss::params) && jsonRPC[jss::params].isArray() &&"
+    },
+    {
+     "line": 712,
+     "text": "            jsonRPC[jss::params].size() > 0 &&"
+    },
+    {
+     "line": 713,
+     "text": "            jsonRPC[jss::params][Json::UInt(0)].isObjectOrNull())"
+    },
+    {
+     "line": 714,
+     "text": "        {"
+    },
+    {
+     "line": 715,
+     "text": "            role = requestRole("
+    },
+    {
+     "line": 716,
+     "text": "                required,"
+    },
+    {
+     "line": 717,
+     "text": "                port,"
+    },
+    {
+     "line": 718,
+     "text": "                jsonRPC[jss::params][Json::UInt(0)],"
+    },
+    {
+     "line": 719,
+     "text": "                remoteIPAddress,"
+    },
+    {
+     "line": 720,
+     "text": "                user);"
+    },
+    {
+     "line": 721,
+     "text": "        }"
+    },
+    {
+     "line": 722,
+     "text": "        else"
+    },
+    {
+     "line": 723,
+     "text": "        {"
+    },
+    {
+     "line": 724,
+     "text": "            role = requestRole("
+    }
+   ],
+   "note": "processJson: role computed via requestRole(required = roleRequired(method))."
+  },
+  {
+   "id": "E-11",
+   "file": "src/xrpld/rpc/detail/ServerHandler.cpp",
+   "line_ranges": [
+    [
+     752,
+     757
+    ]
+   ],
+   "lines": [
+    {
+     "line": 752,
+     "text": "        if (role == Role::FORBID)"
+    },
+    {
+     "line": 753,
+     "text": "        {"
+    },
+    {
+     "line": 754,
+     "text": "            usage.charge(Resource::feeMalformedRPC);"
+    },
+    {
+     "line": 755,
+     "text": "            if (!batch)"
+    },
+    {
+     "line": 756,
+     "text": "            {"
+    },
+    {
+     "line": 757,
+     "text": "                HTTPReply(403, \"Forbidden\", output, rpcJ);"
+    }
+   ],
+   "note": "role == FORBID -> HTTP 403 'Forbidden' (non-batch) \u2014 the observed refusal path for ADMIN methods."
+  },
+  {
+   "id": "E-12",
+   "file": "src/xrpld/rpc/detail/ServerHandler.cpp",
+   "line_ranges": [
+    [
+     85,
+     87
+    ],
+    [
+     299,
+     312
+    ]
+   ],
+   "lines": [
+    {
+     "line": 85,
+     "text": "authorized(Port const& port, std::map<std::string, std::string> const& h)"
+    },
+    {
+     "line": 86,
+     "text": "{"
+    },
+    {
+     "line": 87,
+     "text": "    if (port.user.empty() || port.password.empty())"
+    },
+    {
+     "line": 299,
+     "text": "    // Make sure RPC is enabled on the port"
+    },
+    {
+     "line": 300,
+     "text": "    if (session.port().protocol.count(\"http\") == 0 &&"
+    },
+    {
+     "line": 301,
+     "text": "        session.port().protocol.count(\"https\") == 0)"
+    },
+    {
+     "line": 302,
+     "text": "    {"
+    },
+    {
+     "line": 303,
+     "text": "        HTTPReply(403, \"Forbidden\", makeOutput(session), app_.journal(\"RPC\"));"
+    },
+    {
+     "line": 304,
+     "text": "        session.close(true);"
+    },
+    {
+     "line": 305,
+     "text": "        return;"
+    },
+    {
+     "line": 306,
+     "text": "    }"
+    },
+    {
+     "line": 307,
+     "text": ""
+    },
+    {
+     "line": 308,
+     "text": "    // Check user/password authorization"
+    },
+    {
+     "line": 309,
+     "text": "    if (!authorized(session.port(), build_map(session.request())))"
+    },
+    {
+     "line": 310,
+     "text": "    {"
+    },
+    {
+     "line": 311,
+     "text": "        HTTPReply(403, \"Forbidden\", makeOutput(session), app_.journal(\"RPC\"));"
+    },
+    {
+     "line": 312,
+     "text": "        session.close(true);"
+    }
+   ],
+   "note": "authorized(): port user/password empty -> true (no port-level auth); onRequest: non-HTTP(S) port or failed auth -> HTTP 403."
+  },
+  {
+   "id": "E-13",
+   "file": "src/xrpld/rpc/detail/ServerHandler.cpp",
+   "line_ranges": [
+    [
+     609,
+     609
+    ]
+   ],
+   "lines": [
+    {
+     "line": 609,
+     "text": "Json::Int constexpr forbidden = -32605;"
+    }
+   ],
+   "note": "JSON error code 'forbidden' = -32605."
+  },
+  {
+   "id": "E-14",
+   "file": "src/libxrpl/protocol/ErrorCodes.cpp",
+   "line_ranges": [
+    [
+     100,
+     100
+    ]
+   ],
+   "lines": [
+    {
+     "line": 100,
+     "text": "    {rpcNO_PERMISSION,          \"noPermission\",         \"You don't have permission for this command.\", 401},"
+    }
+   ],
+   "note": "rpcNO_PERMISSION maps to HTTP 401 ('noPermission')."
+  },
+  {
+   "id": "E-15",
+   "file": "src/xrpld/rpc/handlers/LedgerHandler.cpp",
+   "line_ranges": [
+    [
+     67,
+     71
+    ]
+   ],
+   "lines": [
+    {
+     "line": 67,
+     "text": "    {"
+    },
+    {
+     "line": 68,
+     "text": "        // Until some sane way to get full ledgers has been implemented,"
+    },
+    {
+     "line": 69,
+     "text": "        // disallow retrieving all state nodes."
+    },
+    {
+     "line": 70,
+     "text": "        if (!isUnlimited(context_.role))"
+    },
+    {
+     "line": 71,
+     "text": "            return rpcNO_PERMISSION;"
+    }
+   ],
+   "note": "ledger with full/accounts requires isUnlimited role -> rpcNO_PERMISSION (second, in-handler gate)."
+  },
+  {
+   "id": "E-16",
+   "file": "src/xrpld/rpc/handlers/Feature1.cpp",
+   "line_ranges": [
+    [
+     47,
+     47
+    ],
+    [
+     78,
+     89
+    ]
+   ],
+   "lines": [
+    {
+     "line": 47,
+     "text": "    bool const isAdmin = context.role == Role::ADMIN;"
+    },
+    {
+     "line": 78,
+     "text": "    if (context.params.isMember(jss::vetoed))"
+    },
+    {
+     "line": 79,
+     "text": "    {"
+    },
+    {
+     "line": 80,
+     "text": "        if (!isAdmin)"
+    },
+    {
+     "line": 81,
+     "text": "            return rpcError(rpcNO_PERMISSION);"
+    },
+    {
+     "line": 82,
+     "text": ""
+    },
+    {
+     "line": 83,
+     "text": "        if (context.params[jss::vetoed].asBool())"
+    },
+    {
+     "line": 84,
+     "text": "            table.veto(feature);"
+    },
+    {
+     "line": 85,
+     "text": "        else"
+    },
+    {
+     "line": 86,
+     "text": "            table.unVeto(feature);"
+    },
+    {
+     "line": 87,
+     "text": "    }"
+    },
+    {
+     "line": 88,
+     "text": ""
+    },
+    {
+     "line": 89,
+     "text": "    Json::Value jvReply = table.getJson(feature, isAdmin);"
+    }
+   ],
+   "note": "feature: isAdmin flag; vetoing a feature without admin -> rpcNO_PERMISSION; reply is role-aware (getJson(feature, isAdmin))."
+  },
+  {
+   "id": "E-17",
+   "file": "src/xrpld/overlay/detail/OverlayImpl.cpp",
+   "line_ranges": [
+    [
+     690,
+     691
+    ]
+   ],
+   "lines": [
+    {
+     "line": 690,
+     "text": "            isTrusted ? ManifestRateLimitCapPolicy::uncapped"
+    },
+    {
+     "line": 691,
+     "text": "                      : ManifestRateLimitCapPolicy::capped);"
+    }
+   ],
+   "note": "Manifest rate-limit cap policy: trusted peers uncapped, untrusted capped (overlay only, not RPC)."
+  },
+  {
+   "id": "E-18",
+   "file": "src/xrpld/rpc/handlers/TransactionEntry.cpp",
+   "line_ranges": [
+    [
+     54,
+     60
+    ]
+   ],
+   "lines": [
+    {
+     "line": 54,
+     "text": "        // XXX We don't support any transaction yet."
+    },
+    {
+     "line": 55,
+     "text": "        jvResult[jss::error] = \"notYetImplemented\";"
+    },
+    {
+     "line": 56,
+     "text": "    }"
+    },
+    {
+     "line": 57,
+     "text": "    else"
+    },
+    {
+     "line": 58,
+     "text": "    {"
+    },
+    {
+     "line": 59,
+     "text": "        uint256 uTransID;"
+    },
+    {
+     "line": 60,
+     "text": "        // XXX Relying on trusted WSS client. Would be better to have a strict"
+    }
+   ],
+   "note": "transaction_entry: 'We don't support any transaction yet' -> notYetImplemented."
+  },
+  {
+   "id": "E-19",
+   "file": "src/xrpld/rpc/detail/Role.cpp",
+   "line_ranges": [
+    [
+     125,
+     131
+    ]
+   ],
+   "lines": [
+    {
+     "line": 125,
+     "text": "isUnlimited(Role const& role)"
+    },
+    {
+     "line": 126,
+     "text": "{"
+    },
+    {
+     "line": 127,
+     "text": "    return role == Role::ADMIN || role == Role::IDENTIFIED;"
+    },
+    {
+     "line": 128,
+     "text": "}"
+    },
+    {
+     "line": 129,
+     "text": ""
+    },
+    {
+     "line": 130,
+     "text": "bool"
+    },
+    {
+     "line": 131,
+     "text": "isUnlimited("
+    }
+   ],
+   "note": "isUnlimited: ADMIN or IDENTIFIED roles only."
+  }
+ ]
+}
