@@ -1,0 +1,94 @@
+[step] rpc_probe start: 2026-11-26T04:17:28Z
+[step] endpoint: https://rpc.testnet.postfiat.org
+[step] inventory: 74 methods (PROBE 45, REFUSAL 23, SKIP 6 — SKIP never called)
+[step] plan: one request per PROBE/REFUSAL method, then a 12-request server_info burst (0.25 s apart); delay 0.15 s between calls
+[step] account_channels [PROBE] http=200 outcome=error-result error=19 bytes=195 latency_ms=1562.7
+[step] account_currencies [PROBE] http=200 outcome=error-result error=19 bytes=197 latency_ms=994.8
+[step] account_info [PROBE] http=200 outcome=error-result error=19 bytes=287 latency_ms=911.3
+[step] account_lines [PROBE] http=200 outcome=error-result error=19 bytes=192 latency_ms=1004.9
+[step] account_nfts [PROBE] http=200 outcome=error-result error=19 bytes=191 latency_ms=1001.8
+[step] account_objects [PROBE] http=200 outcome=error-result error=19 bytes=194 latency_ms=825.1
+[step] account_offers [PROBE] http=200 outcome=error-result error=19 bytes=193 latency_ms=844.5
+[step] account_tx [PROBE] http=200 outcome=result error=None bytes=180 latency_ms=838.4
+[step] amm_info [PROBE] http=200 outcome=error-result error=35 bytes=241 latency_ms=831.6
+[step] blacklist [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=1057.1
+[step] book_changes [PROBE] http=200 outcome=result error=None bytes=214 latency_ms=988.6
+[step] book_offers [PROBE] http=200 outcome=result error=None bytes=95 latency_ms=996.3
+[step] can_delete [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=949.9
+[step] channel_authorize: SKIP — secret-bearing: creates a payment-channel signature (not called)
+[step] channel_verify [PROBE] http=200 outcome=error-result error=31 bytes=205 latency_ms=964.5
+[step] connect [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=837.9
+[step] consensus_info [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=1110.5
+[step] deposit_authorized [PROBE] http=200 outcome=error-result error=67 bytes=322 latency_ms=876.7
+[step] exclusion_info [PROBE] http=200 outcome=error-result error=12 bytes=169 latency_ms=830.5
+[step] feature [PROBE] http=200 outcome=result error=None bytes=12817 latency_ms=864.4
+[step] fee [PROBE] http=200 outcome=result error=None bytes=363 latency_ms=989.8
+[step] fetch_info [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=867.6
+[step] gateway_balances [PROBE] http=200 outcome=result error=None bytes=130 latency_ms=905.5
+[step] get_aggregate_price [PROBE] http=200 outcome=error-result error=31 bytes=212 latency_ms=1038.0
+[step] get_counts [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=818.3
+[step] ledger [PROBE] http=200 outcome=result error=None bytes=761 latency_ms=907.6
+[step] ledger_accept [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=1004.2
+[step] ledger_cleaner [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=872.7
+[step] ledger_closed [PROBE] http=200 outcome=result error=None bytes=138 latency_ms=977.5
+[step] ledger_current [PROBE] http=200 outcome=result error=None bytes=65 latency_ms=1035.1
+[step] ledger_data [PROBE] http=200 outcome=result error=None bytes=1250 latency_ms=931.2
+[step] ledger_entry [PROBE] http=200 outcome=error-result error=98 bytes=219 latency_ms=1011.7
+[step] ledger_header [PROBE] http=200 outcome=result error=None bytes=1014 latency_ms=1066.9
+[step] ledger_request [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=1061.6
+[step] log_level [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=981.4
+[step] logrotate [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=1030.4
+[step] manifest [PROBE] http=200 outcome=result error=None bytes=594 latency_ms=947.6
+[step] nft_buy_offers [PROBE] http=200 outcome=error-result error=31 bytes=230 latency_ms=1057.3
+[step] nft_sell_offers [PROBE] http=200 outcome=error-result error=31 bytes=231 latency_ms=1039.1
+[step] noripple_check [PROBE] http=200 outcome=error-result error=31 bytes=198 latency_ms=985.1
+[step] owner_info [PROBE] http=200 outcome=result error=None bytes=61 latency_ms=957.3
+[step] path_find [PROBE] http=200 outcome=error-result error=31 bytes=309 latency_ms=834.0
+[step] peer_reservations_add [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=939.7
+[step] peer_reservations_del [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=956.6
+[step] peer_reservations_list [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=1055.8
+[step] peers [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=1048.5
+[step] ping [PROBE] http=200 outcome=result error=None bytes=71 latency_ms=835.6
+[step] print [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=965.3
+[step] random [PROBE] http=200 outcome=result error=None bytes=110 latency_ms=921.8
+[step] ripple_path_find [PROBE] http=200 outcome=error-result error=51 bytes=347 latency_ms=1016.7
+[step] server_definitions [PROBE] http=200 outcome=result error=None bytes=44686 latency_ms=1105.0
+[step] server_info [PROBE] http=200 outcome=result error=None bytes=1170 latency_ms=820.8
+[step] server_state [PROBE] http=200 outcome=result error=None bytes=1300 latency_ms=905.3
+[step] sign: SKIP — secret-bearing: signing requires a private key in the request (not called)
+[step] sign_for: SKIP — secret-bearing: signing requires a private key in the request (not called)
+[step] simulate: SKIP — heavy: transaction simulation; not attempted (not called)
+[step] stop [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=998.4
+[step] submit: SKIP — state-changing: would broadcast a transaction (not called)
+[step] submit_multisigned: SKIP — state-changing: would broadcast a transaction (not called)
+[step] subscribe [PROBE] http=200 outcome=error-result error=31 bytes=144 latency_ms=1070.8
+[step] transaction_entry [PROBE] http=200 outcome=error-result error=notYetImplemented bytes=228 latency_ms=977.1
+[step] tx [PROBE] http=200 outcome=error-result error=29 bytes=219 latency_ms=1151.3
+[step] tx_history [PROBE] http=200 outcome=error-result error=31 bytes=145 latency_ms=1061.7
+[step] tx_reduce_relay [PROBE] http=200 outcome=result error=None bytes=365 latency_ms=1134.8
+[step] unl_list [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=865.3
+[step] unsubscribe [PROBE] http=200 outcome=error-result error=31 bytes=146 latency_ms=1049.2
+[step] validation_create [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=860.2
+[step] validator_info [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=1081.5
+[step] validator_list_sites [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=918.5
+[step] validator_votes [PROBE] http=200 outcome=result error=None bytes=49 latency_ms=1007.2
+[step] validators [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=973.0
+[step] vault_info [PROBE] http=200 outcome=error-result error=31 bytes=197 latency_ms=977.3
+[step] version [PROBE] http=200 outcome=result error=None bytes=92 latency_ms=1011.3
+[step] wallet_propose [REFUSAL] http=403 outcome=unparsable error=None bytes=11 latency_ms=837.5
+[step] burst start: 12 x server_info, 0.25 s apart
+[step] burst 1/12: http=200 outcome=result latency_ms=897.3
+[step] burst 2/12: http=200 outcome=result latency_ms=990.3
+[step] burst 3/12: http=200 outcome=result latency_ms=861.6
+[step] burst 4/12: http=200 outcome=result latency_ms=941.5
+[step] burst 5/12: http=200 outcome=result latency_ms=882.2
+[step] burst 6/12: http=200 outcome=result latency_ms=863.6
+[step] burst 7/12: http=200 outcome=result latency_ms=852.9
+[step] burst 8/12: http=200 outcome=result latency_ms=1005.0
+[step] burst 9/12: http=200 outcome=result latency_ms=1001.4
+[step] burst 10/12: http=200 outcome=result latency_ms=959.8
+[step] burst 11/12: http=200 outcome=result latency_ms=1008.9
+[step] burst 12/12: http=200 outcome=result latency_ms=870.4
+[step] burst done
+[step] summary: called=68 result=21 error-result=24 error=0 http403=23 http401=0 http429=0 burst_n=12 burst_429=0
+[step] rpc_probe done

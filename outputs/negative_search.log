@@ -1,0 +1,47 @@
+[step] negative_search start
+[step] pin: 0085a1ff885d6a446369cf73a4430f75af22be55
+[step] N-1 per-method authentication beyond the table roles (auth/password in src/xrpld/rpc/):
+src/xrpld/rpc/Role.h:50:    are the optional keys 'admin_user' and 'admin_password' used to
+src/xrpld/rpc/ServerHandler.h:70:            std::string admin_password;
+src/xrpld/rpc/detail/RPCCall.cpp:1547:            if (!setup.client.admin_password.empty())
+src/xrpld/rpc/detail/RPCCall.cpp:1548:                jvRequest["admin_password"] = setup.client.admin_password;
+src/xrpld/rpc/detail/Role.cpp:30:passwordUnrequiredOrSentCorrect(Port const& port, Json::Value const& params)
+src/xrpld/rpc/detail/Role.cpp:34:        "ripple::passwordUnrequiredOrSentCorrect : non-empty admin nets");
+src/xrpld/rpc/detail/Role.cpp:36:        (!port.admin_user.empty() || !port.admin_password.empty());
+src/xrpld/rpc/detail/Role.cpp:39:        ((params["admin_password"].isString() &&
+src/xrpld/rpc/detail/Role.cpp:40:          params["admin_password"].asString() == port.admin_password) &&
+src/xrpld/rpc/detail/Role.cpp:91:        passwordUnrequiredOrSentCorrect(port, params);
+src/xrpld/rpc/detail/ServerHandler.cpp:1133:    p.admin_password = parsed.admin_password;
+src/xrpld/rpc/detail/ServerHandler.cpp:1240:    setup.client.admin_password = iter->admin_password;
+[step] N-1 count: 12 hits (all plumbing — port/client setup and role checks, no per-method auth)
+[step] N-2 public RPC rate limiting (rate.limit|throttl in src/xrpld/rpc/):
+[step] N-2 count in rpc/: 0
+[step] N-2b same terms across all of src/:
+src/xrpld/app/misc/Manifest.h:265:enum class ManifestRateLimitCapPolicy : std::uint8_t {
+src/xrpld/app/misc/Manifest.h:430:    applyManifest(Manifest m, ManifestRateLimitCapPolicy policy);
+src/xrpld/app/misc/ValidatorExclusionManager.cpp:96:    // Check rate limiting - only allow changes every CHANGE_INTERVAL ledgers
+src/xrpld/app/misc/ValidatorExclusionManager.cpp:99:        JLOG(j_.trace()) << "ValidatorExclusionManager: Rate limited, next change at ledger "
+src/xrpld/app/misc/ValidatorExclusionManager.h:40: * Manages validator's own exclusion list changes with rate limiting.
+src/xrpld/app/misc/ValidatorExclusionManager.h:42: * and generates add/remove operations for validations with rate limiting.
+src/xrpld/app/misc/ValidatorExclusionManager.h:62:     * Rate limited to every 10th ledger with single add/remove.
+src/xrpld/app/misc/ValidatorExclusionManager.h:95:    // Minimum ledgers between changes (rate limiting)
+src/xrpld/app/misc/detail/Manifest.cpp:395:    ManifestRateLimitCapPolicy const policy)
+src/xrpld/app/misc/detail/Manifest.cpp:505:                policy == ManifestRateLimitCapPolicy::uncapped &&
+[step] N-3 api/tasks in the pinned tree:
+[step] N-3 count: 0
+[step] N-4 switch to disable sign/submit on a public node:
+[step] N-4 count: 0
+[step] N-5 per-method allowlist/blocklist in rpc/:
+[step] N-5 count: 0
+[step] N-6 who can emit HTTP 403 in-tree (403/forbidden in src/xrpld/rpc/ + server):
+src/xrpld/rpc/detail/ServerHandler.cpp:303:        HTTPReply(403, "Forbidden", makeOutput(session), app_.journal("RPC"));
+src/xrpld/rpc/detail/ServerHandler.cpp:311:        HTTPReply(403, "Forbidden", makeOutput(session), app_.journal("RPC"));
+src/xrpld/rpc/detail/ServerHandler.cpp:609:Json::Int constexpr forbidden = -32605;
+src/xrpld/rpc/detail/ServerHandler.cpp:757:                HTTPReply(403, "Forbidden", output, rpcJ);
+src/xrpld/rpc/detail/ServerHandler.cpp:761:            r[jss::error] = make_json_error(forbidden, "Forbidden");
+[step] N-6 count: 5
+[step] N-7 admin password optional (passwordUnrequiredOrSentCorrect):
+30:passwordUnrequiredOrSentCorrect(Port const& port, Json::Value const& params)
+34:        "ripple::passwordUnrequiredOrSentCorrect : non-empty admin nets");
+91:        passwordUnrequiredOrSentCorrect(port, params);
+[step] negative_search done

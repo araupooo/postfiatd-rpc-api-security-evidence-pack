@@ -1,0 +1,11 @@
+Probe environment
+-----------------
+Probe host: Linux VM (no GPU), Python 3 (urllib, no third-party dependencies).
+Endpoints: https://rpc.testnet.postfiat.org, https://tasknode.postfiat.org.
+RPC probe window: 2026-11-26T04:17:28Z (11:17:28 WIB).
+API probe window: 2026-11-26T04:18:58Z (11:18:58 WIB).
+Pinned postfiatd revision: 0085a1ff885d6a446369cf73a4430f75af22be55 (2026-10-10).
+Bounded, non-destructive probes only: 68 RPC calls + 12-request burst (0.25 s apart),
+6 API probes + 5-request burst (0.5 s apart). No credentials were used.
+No state-changing calls were made (submit, submit_multisigned, sign, sign_for,
+channel_authorize, simulate were never called).

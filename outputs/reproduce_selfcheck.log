@@ -1,0 +1,63 @@
+[step] reproduce start
+[step] scratch dir: <scratch>
+[step] digests
+.github/workflows/ci.yml: OK
+.gitignore: OK
+README.md: OK
+data/method_inventory.json: OK
+data/risk_register.json: OK
+data/roadmap.json: OK
+data/scorecard.json: OK
+data/source_excerpts.json: OK
+docs/CLAIMS.md: OK
+docs/FAILURE_MODES.md: OK
+docs/METHOD_INVENTORY.md: OK
+docs/PROBE_REPORT.md: OK
+docs/REMEDIATION.md: OK
+docs/REPRODUCTION.md: OK
+docs/RISK_REGISTER.md: OK
+docs/ROADMAP.md: OK
+docs/SCORECARD.md: OK
+docs/SOURCES.md: OK
+outputs/api_probe.log: OK
+outputs/api_probe_raw.json: OK
+outputs/environment.txt: OK
+outputs/negative_search.log: OK
+outputs/rpc_probe.log: OK
+outputs/rpc_probe_raw.json: OK
+reproduce.sh: OK
+scripts/build_excerpts.py: OK
+scripts/build_inventory.py: OK
+scripts/check_excerpts.py: OK
+scripts/check_inventory.py: OK
+scripts/check_measurements.py: OK
+scripts/negative_search.sh: OK
+scripts/probe_api.py: OK
+scripts/probe_rpc.py: OK
+verify_digests.sh: OK
+[step] excerpts (structure)
+[step] pin field present (40-char SHA): PASS
+[step] 19 excerpts, ids unique: PASS
+[step] 19 excerpts internally consistent: PASS
+CHECK OK (structure only; re-run with --pin to verify against the checkout)
+[step] inventory
+[step] 74 methods, totals consistent: PASS
+CHECK OK (74 methods verified against the vendored table)
+[step] live RPC probe (scratch)
+[step] live RPC probe: PASS
+[step] live API probe (scratch)
+[step] live API probe: PASS
+[step] negative search (scratch)
+[step] negative search: PASS
+[step] measurements (scratch)
+[step] rpc records cover all 74 methods: PASS
+[step] no SKIP method called (0 violations): PASS
+[step] rpc burst has 12 server_info entries: PASS
+[step] REFUSAL methods refused (403, or transient 308 within tolerance): PASS
+[step] zero HTTP 429 anywhere in rpc probe: PASS
+[step] api probes P-01..P-06 present: PASS
+[step] P-04 GET /api/tasks http 200 + unauthenticated JSON read: PASS
+[step] api burst has 5 entries: PASS
+[step] zero HTTP 429 in api burst: PASS
+CHECK OK (probe outputs match the plan and the headline claims)
+REPRODUCE OK

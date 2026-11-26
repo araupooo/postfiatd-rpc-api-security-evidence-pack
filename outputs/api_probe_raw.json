@@ -1,0 +1,172 @@
+{
+ "base": "https://tasknode.postfiat.org",
+ "started_utc": "2026-11-26T04:18:58Z",
+ "burst_n": 5,
+ "burst_delay_s": 0.5,
+ "records": [
+  {
+   "probe": "P-01",
+   "method": "GET",
+   "path": "/",
+   "http": 200,
+   "bytes": 1141,
+   "latency_ms": 880.9,
+   "transport_error": null,
+   "server_header": null,
+   "content_type": null,
+   "top_keys": [],
+   "null_fields": [],
+   "tag": "",
+   "truncated": false,
+   "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\" />\n    <link rel=\"alternate icon\" href=\"/favicon.ico\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <meta name=\"color-scheme\" content=\"light dark\" />\n    <meta name=\"theme-color\" content=\"#faf9f6\" />\n    <script src=\"/theme-init.js\"></script>\n    <title>Task Node</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-DAZNFMzG.js\"></script>\n    <link rel=\"modulepreload\" crossorigin href=\"/assets/rolldown-runtime-BWaJ3C7D.js\">\n    <link rel=\"modulepreload\" crossorigin href=\"/assets/react-runtime-Ctaik3bb.js\">\n    <link rel=\"modulepreload\" crossorigin href=\"/assets/icon-runtime-D1t3NAxs.js\">\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-DyyXnHan.css\">\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>\n"
+  },
+  {
+   "probe": "P-02",
+   "method": "GET",
+   "path": "/robots.txt",
+   "http": 404,
+   "bytes": 66,
+   "latency_ms": 740.1,
+   "transport_error": null,
+   "server_header": null,
+   "content_type": null,
+   "top_keys": [
+    "error",
+    "ok",
+    "path"
+   ],
+   "null_fields": [],
+   "tag": "",
+   "truncated": false,
+   "body": "{\"ok\":false,\"error\":\"static_asset_not_found\",\"path\":\"/robots.txt\"}"
+  },
+  {
+   "probe": "P-03",
+   "method": "GET",
+   "path": "/api",
+   "http": 200,
+   "bytes": 1141,
+   "latency_ms": 743.4,
+   "transport_error": null,
+   "server_header": null,
+   "content_type": null,
+   "top_keys": [],
+   "null_fields": [],
+   "tag": "",
+   "truncated": false,
+   "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\" />\n    <link rel=\"alternate icon\" href=\"/favicon.ico\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <meta name=\"color-scheme\" content=\"light dark\" />\n    <meta name=\"theme-color\" content=\"#faf9f6\" />\n    <script src=\"/theme-init.js\"></script>\n    <title>Task Node</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-DAZNFMzG.js\"></script>\n    <link rel=\"modulepreload\" crossorigin href=\"/assets/rolldown-runtime-BWaJ3C7D.js\">\n    <link rel=\"modulepreload\" crossorigin href=\"/assets/react-runtime-Ctaik3bb.js\">\n    <link rel=\"modulepreload\" crossorigin href=\"/assets/icon-runtime-D1t3NAxs.js\">\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-DyyXnHan.css\">\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>\n"
+  },
+  {
+   "probe": "P-04",
+   "method": "GET",
+   "path": "/api/tasks",
+   "http": 200,
+   "bytes": 1970,
+   "latency_ms": 848.2,
+   "transport_error": null,
+   "server_header": null,
+   "content_type": null,
+   "top_keys": [
+    "alphaRequestEnabled",
+    "dailyRewardCap",
+    "networkRequestEnabled",
+    "networkTasks",
+    "outstanding",
+    "personalRequestEnabled",
+    "refused",
+    "reinstatement",
+    "requests",
+    "rewarded",
+    "sync",
+    "verification"
+   ],
+   "null_fields": [
+    "reinstatement"
+   ],
+   "tag": "UNAUTHENTICATED-JSON-READ",
+   "truncated": false,
+   "body": "{\"personalRequestEnabled\":true,\"networkRequestEnabled\":false,\"alphaRequestEnabled\":false,\"dailyRewardCap\":8,\"requests\":{\"items\":[],\"sync\":{\"source\":\"task_requests\",\"status\":\"wallet_required\",\"walletAddress\":null,\"requestCount\":0,\"lastUpdatedAt\":null}},\"outstanding\":[],\"verification\":[],\"refused\":[],\"rewarded\":[],\"sync\":{\"source\":\"task_projections\",\"status\":\"wallet_required\",\"walletAddress\":null,\"projectionCount\":0,\"lastSyncedAt\":null,\"requiresRefresh\":false,\"nextPollMs\":null,\"refreshReason\":\"\",\"activeRequestCount\":0,\"refreshTaskIds\":[]},\"networkTasks\":{\"schema\":\"pf.task_node.network_task_eligibility.v1\",\"canRequestManually\":false,\"manualRequestCopy\":\"Request task creates personal task proposals. Network Tasks are routed by Hive Board Manager when an active project needs a candidate.\",\"policy\":{\"requiresSignedInAccount\":true,\"requiresLinkedPftWallet\":true,\"requiresActivePftlWalletSync\":false,\"requiresCompletedNetworkDiagnosticReport\":false,\"capacityConsumedByOutstandingOrPendingNetworkTasks\":true,\"capacityBlocksUntilTaskReachesTerminalState\":true,\"capacityIgnoresTaskClass\":true,\"delinkedWalletTasksDoNotBlockCurrentWallet\":true,\"personalTasksDoNotBlockNetworkTasks\":true,\"requiresNetworkTaskOperatingBadge\":true,\"boardManagerSelectsWhenProjectNeedsWork\":true},\"status\":\"sign_in_required\",\"label\":\"Sign in required\",\"summary\":\"Sign in before Task Node can build a Network Task routing profile.\",\"nextAction\":\"Sign in with GitHub, email, Telegram, or X.\",\"accountId\":\"\",\"walletAddress\":\"\",\"profile\":{\"status\":\"missing\"},\"wallet\":{\"linked\":false,\"synced\":false},\"capacity\":{\"available\":false,\"blockers\":[]},\"badgeEligibility\":{\"status\":\"unknown\",\"verifiedBadgeIds\":[],\"defaultBadge\":\"\",\"allowedWorkTypes\":[],\"rewardCaps\":{},\"source\":\"\",\"hasNonAnonOperatingBadge\":false,\"summary\":\"\"},\"gates\":[{\"id\":\"account\",\"label\":\"Signed-in account\",\"status\":\"action_required\",\"detail\":\"Network Task routing is account-scoped.\",\"action\":\"Sign in\"}]},\"reinstatement\":null}"
+  },
+  {
+   "probe": "P-05",
+   "method": "POST",
+   "path": "/api/tasks",
+   "http": 405,
+   "bytes": 128,
+   "latency_ms": 685.5,
+   "transport_error": null,
+   "server_header": null,
+   "content_type": null,
+   "top_keys": [
+    "allowedMethods",
+    "error",
+    "message",
+    "ok",
+    "route"
+   ],
+   "null_fields": [],
+   "tag": "",
+   "truncated": false,
+   "body": "{\"ok\":false,\"error\":\"tasks_method_not_allowed\",\"route\":\"tasks\",\"allowedMethods\":[\"GET\"],\"message\":\"tasks accepts GET requests.\"}"
+  },
+  {
+   "probe": "P-06",
+   "method": "POST",
+   "path": "/api/tasks",
+   "http": 405,
+   "bytes": 128,
+   "latency_ms": 665.5,
+   "transport_error": null,
+   "server_header": null,
+   "content_type": null,
+   "top_keys": [
+    "allowedMethods",
+    "error",
+    "message",
+    "ok",
+    "route"
+   ],
+   "null_fields": [],
+   "tag": "",
+   "truncated": false,
+   "body": "{\"ok\":false,\"error\":\"tasks_method_not_allowed\",\"route\":\"tasks\",\"allowedMethods\":[\"GET\"],\"message\":\"tasks accepts GET requests.\"}"
+  }
+ ],
+ "burst": [
+  {
+   "i": 1,
+   "http": 200,
+   "bytes": 1970,
+   "latency_ms": 788.0,
+   "transport_error": null
+  },
+  {
+   "i": 2,
+   "http": 200,
+   "bytes": 1970,
+   "latency_ms": 711.9,
+   "transport_error": null
+  },
+  {
+   "i": 3,
+   "http": 200,
+   "bytes": 1970,
+   "latency_ms": 883.0,
+   "transport_error": null
+  },
+  {
+   "i": 4,
+   "http": 200,
+   "bytes": 1970,
+   "latency_ms": 713.9,
+   "transport_error": null
+  },
+  {
+   "i": 5,
+   "http": 200,
+   "bytes": 1970,
+   "latency_ms": 809.8,
+   "transport_error": null
+  }
+ ]
+}

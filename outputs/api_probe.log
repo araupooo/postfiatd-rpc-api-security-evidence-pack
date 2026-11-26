@@ -1,0 +1,18 @@
+[step] api_probe start: 2026-11-26T04:18:58Z
+[step] base: https://tasknode.postfiat.org
+[step] plan: 6 probes (P-01..P-06, same set as the prior window) + a 5-request GET /api/tasks burst (0.5 s apart); read-only, no credentials
+[step] P-01 GET / -> 200 bytes=1141 latency_ms=880.9 
+[step] P-02 GET /robots.txt -> 404 bytes=66 latency_ms=740.1 
+[step] P-03 GET /api -> 200 bytes=1141 latency_ms=743.4 
+[step] P-04 GET /api/tasks -> 200 bytes=1970 latency_ms=848.2 UNAUTHENTICATED-JSON-READ
+[step] P-05 POST /api/tasks -> 405 bytes=128 latency_ms=685.5 
+[step] P-06 POST /api/tasks -> 405 bytes=128 latency_ms=665.5 
+[step] burst start: 5 x GET /api/tasks, 0.5 s apart
+[step] burst 1/5: http=200 bytes=1970 latency_ms=788.0
+[step] burst 2/5: http=200 bytes=1970 latency_ms=711.9
+[step] burst 3/5: http=200 bytes=1970 latency_ms=883.0
+[step] burst 4/5: http=200 bytes=1970 latency_ms=713.9
+[step] burst 5/5: http=200 bytes=1970 latency_ms=809.8
+[step] burst done
+[step] summary: probes=6 http2xx=3 http405=2 p04_http=200 p04_bytes=1970 p04_top_keys=alphaRequestEnabled,dailyRewardCap,networkRequestEnabled,networkTasks,outstanding,personalRequestEnabled,refused,reinstatement,requests,rewarded,sync,verification burst_429=0
+[step] api_probe done
